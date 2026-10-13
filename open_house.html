@@ -1,0 +1,251 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Temple Open House Member Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: one calm column. Hero pairs the headline with an at-a-glance panel, then plain sections separated by space, with resources as ruled rows. */
+:root {
+  --bg: #f2f4f8;
+  --surface: #ffffff;
+  --ink: #18223d;
+  --muted: #566079;
+  --line: #d8deea;
+  --accent: #2c479e;
+  --accent-ink: #ffffff;
+  --accent-soft: #e4e9f8;
+  --gold: #b9791a;
+  --gold-soft: #f7ecd8;
+  --font-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+  --font-body: "Figtree", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1424;
+    --surface: #161f37;
+    --ink: #e7ebf6;
+    --muted: #a0abc8;
+    --line: #29345a;
+    --accent: #93a6f2;
+    --accent-ink: #0e1424;
+    --accent-soft: #1f2b52;
+    --gold: #e2ac5a;
+    --gold-soft: #2d2616;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1424;
+  --surface: #161f37;
+  --ink: #e7ebf6;
+  --muted: #a0abc8;
+  --line: #29345a;
+  --accent: #93a6f2;
+  --accent-ink: #0e1424;
+  --accent-soft: #1f2b52;
+  --gold: #e2ac5a;
+  --gold-soft: #2d2616;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  padding-inline: 20px;
+  padding-block: 0 56px;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 960px; margin-inline: auto; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; line-height: 1.12; margin: 0; }
+p { margin: 0; }
+
+.topbar { padding-block: 22px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: center; }
+.eyebrow { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: var(--muted); }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 32px; align-items: start; padding-block: 18px 52px; }
+.hero h1 { font-size: clamp(2.3rem, 6.5vw, 4rem); font-weight: 700; letter-spacing: -0.02em; }
+.hero .lede { margin-top: 18px; font-size: 1.15rem; color: var(--muted); max-width: 34em; }
+.countdown { display: inline-block; margin-top: 22px; padding: 6px 14px; border-radius: 999px; background: var(--gold-soft); color: var(--gold); font-weight: 600; font-size: 0.95rem; }
+.glance { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; display: grid; gap: 18px; }
+.glance .dates { font-family: var(--font-display); font-size: 2.1rem; font-weight: 700; line-height: 1.05; color: var(--accent); }
+.glance .dates small { display: block; font-family: var(--font-body); font-weight: 500; font-size: 0.95rem; color: var(--muted); margin-top: 6px; }
+.glance dl { margin: 0; display: grid; gap: 12px; }
+.glance dt { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.glance dd { margin: 2px 0 0; font-weight: 500; }
+
+/* Sections */
+section { padding-block: 40px; border-top: 1px solid var(--line); }
+section > h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); margin-bottom: 8px; }
+.section-intro { color: var(--muted); max-width: 40em; margin-bottom: 26px; }
+
+.visit { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 40px; }
+.visit div { min-width: 0; padding-block: 12px; border-bottom: 1px solid var(--line); }
+.visit h3 { font-family: var(--font-body); font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 4px; }
+
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; counter-reset: step; }
+.steps li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 16px; align-items: start; counter-increment: step; }
+.steps li::before { content: counter(step); display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; }
+.steps h3 { font-size: 1.2rem; margin-bottom: 4px; }
+.steps p { color: var(--muted); max-width: 38em; }
+.say { margin-top: 10px; padding: 12px 16px; background: var(--accent-soft); border-radius: 10px; font-weight: 500; color: var(--ink); max-width: 38em; }
+
+.challenge { margin-top: 32px; padding: 22px 24px; background: var(--gold-soft); border-radius: 14px; display: grid; gap: 6px; }
+.challenge h3 { font-size: 1.3rem; color: var(--gold); }
+.challenge p { max-width: 42em; }
+
+/* Resources */
+.group { margin-top: 30px; }
+.group h3 { font-size: 1.15rem; margin-bottom: 4px; }
+.rows { list-style: none; margin: 0; padding: 0; }
+.rows li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 20px; align-items: center; padding-block: 14px; border-bottom: 1px solid var(--line); }
+.rows .name { font-weight: 600; }
+.rows .desc { display: block; color: var(--muted); font-size: 0.95rem; font-weight: 400; }
+.open { display: inline-block; padding: 7px 16px; border-radius: 8px; border: 1px solid var(--accent); font-weight: 600; font-size: 0.92rem; text-decoration: none; white-space: nowrap; }
+.open:hover { background: var(--accent); color: var(--accent-ink); }
+
+footer { padding-top: 32px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.92rem; display: grid; gap: 6px; }
+
+@media (max-width: 720px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .visit { grid-template-columns: minmax(0, 1fr); }
+  .rows li { grid-template-columns: minmax(0, 1fr); }
+  .open { justify-self: start; }
+}
+</style>
+
+<div class="wrap">
+  <div class="topbar">
+    <span class="eyebrow">Weatherford Texas Stake Member Guide</span>
+  </div>
+
+  <header class="hero">
+    <div>
+      <h1>Come see the Fort Worth Texas Temple</h1>
+      <p class="lede">Public tours are open to everyone. This page has what you need to invite a friend, coworker, or neighbor, and to answer their questions when they say yes.</p>
+      <span class="countdown" id="countdown">Public tours begin November 5</span>
+    </div>
+    <aside class="glance" aria-label="Open house at a glance">
+      <div class="dates">Nov 5 to Nov 21<small>2026, closed on Sundays</small></div>
+      <dl>
+        <div><dt>Hours</dt><dd>9:00 a.m. to 8:00 p.m.</dd></div>
+        <div><dt>Address</dt><dd>1851 Greenridge Dr, Burleson, Texas 76028</dd></div>
+        <div><dt>Reservations</dt><dd>None needed. All are welcome.</dd></div>
+      </dl>
+    </aside>
+  </header>
+
+  <section id="visit">
+    <h2>Plan your visit</h2>
+    <p class="section-intro">The tour is a walk through the building, so a little preparation makes it easier for your guests.</p>
+    <div class="visit">
+      <div><h3>Where</h3><p>1851 Greenridge Dr, Burleson, Texas 76028. <a href="https://www.google.com/maps/search/?api=1&amp;query=1851+Greenridge+Dr+Burleson+TX+76028" target="_blank" rel="noopener">Open in Maps</a></p></div>
+      <div><h3>Shortest waits</h3><p>Wait times are significantly shorter on weekdays.</p></div>
+      <div><h3>What to wear</h3><p>The tour is a walking tour. Comfortable shoes are recommended.</p></div>
+      <div><h3>Getting there</h3><p>Carpooling is highly encouraged.</p></div>
+      <div><h3>Accessibility</h3><p>The open house is wheelchair accessible. Service animals are not permitted in the temple.</p></div>
+      <div><h3>Official information</h3><p><a href="https://fortworthtexastemple.org" target="_blank" rel="noopener">FortWorthTexasTemple.org</a></p></div>
+    </div>
+  </section>
+
+  <section id="share">
+    <h2>How to share a pass-along card</h2>
+    <p class="section-intro">Your bishop and ward leaders have the cards. The cards are a tool for a personal invitation. They are not meant to be picked up from a table and taken home.</p>
+    <ol class="steps">
+      <li>
+        <div>
+          <h3>Pray about who to invite</h3>
+          <p>Think of someone you already know: a neighbor, a coworker, a friend from the team or the PTA.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Hand them a card and invite them in person</h3>
+          <p>For most of our neighbors this is the only time they can ever walk through a temple. Offer to go with them.</p>
+          <p class="say">Try: "I'd love for you to come see this with me."</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Keep inviting through November</h3>
+          <p>Mention it again, share your own experience, and post to your ward or family group using the files below.</p>
+        </div>
+      </li>
+    </ol>
+    <div class="challenge">
+      <h3>The youth and Primary challenge</h3>
+      <p>Half of the stake's cards are set aside for Young Women, Young Men, and Primary children. The stake presidency has approved a friendly challenge for them to out-invite the adults. Our bet is on the kids.</p>
+    </div>
+  </section>
+
+  <section id="resources">
+    <h2>Resources</h2>
+    <p class="section-intro">Everything from the member folder, organized by what you want to do.</p>
+
+    <div class="group">
+      <h3>Print and post</h3>
+      <ul class="rows">
+        <li><span class="name">Meetinghouse sign, 11x17 vertical<span class="desc">Dates, hours, and address for a bulletin board or classroom door.</span></span><a class="open" href="https://drive.google.com/file/d/1FSOVNPbzjbdrFMhOiNyVkr4U0EnFS7tw/view?usp=drivesdk" target="_blank" rel="noopener">Open PDF</a></li>
+        <li><span class="name">Public invitation, digital<span class="desc">The pass-along card in a form you can text or email to a friend.</span></span><a class="open" href="https://drive.google.com/file/d/1c5gCj25mEySo7de_b5gO9icY2x--ZhW3/view?usp=drivesdk" target="_blank" rel="noopener">Open PDF</a></li>
+        <li><span class="name">Temple location map<span class="desc">How to find the temple and where to park.</span></span><a class="open" href="https://drive.google.com/file/d/1J2kIQYaB_VYOscpgbAlcwcm6XetqzCOB/view?usp=drivesdk" target="_blank" rel="noopener">Open map</a></li>
+      </ul>
+    </div>
+
+    <div class="group">
+      <h3>Learn and answer questions</h3>
+      <ul class="rows">
+        <li><span class="name">Fort Worth Temple FAQ<span class="desc">Plain answers to the questions guests ask most.</span></span><a class="open" href="https://drive.google.com/file/d/10WuHoGF_6AOj_iTQFKiC_uZ5ksZsFWKt/view?usp=drivesdk" target="_blank" rel="noopener">Open PDF</a></li>
+        <li><span class="name">Answers to temple questions<span class="desc">Short official videos, in the Church's media library.</span></span><a class="open" href="https://www.churchofjesuschrist.org/media/collection/answers-to-temple-questions?lang=eng" target="_blank" rel="noopener">Watch</a></li>
+        <li><span class="name">Welcome to the House of the Lord<span class="desc">Elder and Sister Christofferson on the purpose of temples.</span></span><a class="open" href="https://www.churchofjesuschrist.org/media/video/2023-10-0060-welcome-to-the-temple-video-president-nelson-elder-and-sister-christofferson?lang=eng" target="_blank" rel="noopener">Watch</a></li>
+        <li><span class="name">How to Talk About the Temple: Love, Share, and Invite<span class="desc">A North Texas presentation for ward and family use.</span></span><a class="open" href="https://docs.google.com/presentation/d/18IGqfyGSo20V1zseOEtup7Gzj3Xr0G_LtOUvtOncpXI/edit?usp=sharing" target="_blank" rel="noopener">Open slides</a></li>
+        <li><span class="name">Building of the Fort Worth Texas Temple<span class="desc">Presentation by Elder and Sister Robins, site missionaries.</span></span><a class="open" href="https://docs.google.com/presentation/d/1Eg493Fwhf-t2GfNqwPAWJN3Sbu-EwAiy/edit?usp=sharing" target="_blank" rel="noopener">Open slides</a></li>
+        <li><span class="name">More resources<span class="desc">Additional videos, presentations, and the North Texas fact sheet.</span></span><a class="open" href="https://drive.google.com/file/d/118l9SLCniWN-vwfDHNOHPKE9sQq6I5DZ/view?usp=drivesdk" target="_blank" rel="noopener">Open PDF</a></li>
+      </ul>
+    </div>
+
+    <div class="group">
+      <h3>Share online</h3>
+      <ul class="rows">
+        <li><span class="name">Websites and social media guide<span class="desc">Where to follow, like, and share good news from our area.</span></span><a class="open" href="https://drive.google.com/file/d/1ft_legDISU4X75lz2Td0oQ0qbJBqfuLZ/view?usp=drivesdk" target="_blank" rel="noopener">Open PDF</a></li>
+        <li><span class="name">Fort Worth Temple on Instagram</span><a class="open" href="https://www.instagram.com/fortworthtemple/" target="_blank" rel="noopener">Follow</a></li>
+        <li><span class="name">Fort Worth Temple on Facebook</span><a class="open" href="https://www.facebook.com/fortworthtemple" target="_blank" rel="noopener">Follow</a></li>
+        <li><span class="name">Church of Jesus Christ in North Texas<span class="desc">The regional newsroom for the Dallas-Fort Worth area.</span></span><a class="open" href="http://churchofjesuschristinnorthtexas.org/" target="_blank" rel="noopener">Visit</a></li>
+        <li><span class="name">JustServe North Texas<span class="desc">Service opportunities in the community.</span></span><a class="open" href="https://www.facebook.com/justservenorthtexas" target="_blank" rel="noopener">Visit</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>Prepared by the Weatherford Texas Stake Communication Council for stake members.</p>
+    <p>This is a member resource page and is not an official publication of the Church. Open house details come from the official public invitation.</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  try {
+    var el = document.getElementById("countdown");
+    var now = new Date();
+    var start = new Date(2026, 10, 5);
+    var end = new Date(2026, 10, 22);
+    var day = 24 * 60 * 60 * 1000;
+    var days = Math.ceil((start - now) / day);
+    if (now >= start && now < end) {
+      el.textContent = "Public tours are open now";
+    } else if (days > 1) {
+      el.textContent = days + " days until public tours begin";
+    } else if (days === 1) {
+      el.textContent = "Public tours begin tomorrow";
+    } else {
+      el.hidden = true;
+    }
+  } catch (e) {}
+})();
+</script>
+
+</body></html>
